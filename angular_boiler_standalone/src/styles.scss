@@ -76,11 +76,11 @@ $custom-typography: mat.define-typography-config(
   $button: mat.define-typography-level(14px, 14px, 500),
 );
 
-$custom-primary: mat.define-palette($custom-light-palette, 500);
-$custom-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-// The warn palette is optional (defaults to red).
-$custom-warn: mat.define-palette(mat.$red-palette);
+// Light theme palettes
+$light-primary: mat.define-palette($custom-light-palette, 500);
+$light-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$light-warn: mat.define-palette(mat.$red-palette); // The warn palette is optional (defaults to red).
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -88,9 +88,9 @@ $custom-warn: mat.define-palette(mat.$red-palette);
 // A Light theme
 $light-theme: mat.define-light-theme((
   color: (
-    primary: $custom-primary,
-    accent: $custom-accent,
-    warn: $custom-warn,
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
   ),
   typography: $custom-typography, // typography: mat.define-typography-config(),
   density: 0,
@@ -113,9 +113,11 @@ body[data-theme='dark'] {
 }
 
 // Include theme styles for core and each component used in your app.
+@include mat.all-component-themes($light-theme);
+
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($light-theme);
+// @include mat.button-theme($light-theme);
 
 // Additional styles
 @import "./assets/styles/color";
