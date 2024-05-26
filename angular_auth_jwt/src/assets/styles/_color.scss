@@ -1,0 +1,198 @@
+// SASS VARIABLES
+
+$body-color: rgb(97, 97, 97);
+$link-color: rgb(33, 37, 41);
+$text-color: rgb(35, 35, 35);
+$black-opacity: rgba(32,42,49,.4);
+
+$accent-color:rgb(202, 188, 43);
+$primary-color: rgb(1, 74, 55);
+$primary-color-bright: rgb(2, 108, 81);
+$primary-color-dark: rgba(15, 109, 94, 0.522);
+$primary-bg: linear-gradient(0deg, rgba(0, 127, 95, 0.1), rgba(5, 93, 68, 0.9));
+$primary-bg-inverted: linear-gradient(0deg, rgba(5, 93, 68, 0.9), rgba(0, 127, 95, 0.1));
+$header-bg: linear-gradient(to bottom,rgba(2, 108, 81, 0.8) 50%, rgba(2, 108, 81, 0) 100%);
+$header-bg-inverted: linear-gradient(to bottom, rgba(2, 108, 81, 0) 50%, rgba(2, 108, 81, 0.8) 100%);
+$main-bg: rgb(191, 221, 215);
+$accordion-bg: rgb(204, 219, 215);
+
+$secondary-color: #FFBC41;
+$secondary-color-bright: #FDC55C;
+$secondary-color-faint: #FED78E;
+$secondary-color-dark: #BC7B05;
+
+$accent-color: rgb(3, 201, 149);
+$accent-color-faded: #DFECEB;
+$light-color: #ebedef;
+$neutral-color: #d8dee3;
+$mute-color: #a09e9e;
+$darkcyan: rgb(0, 139, 139);
+$darkgoldenrod: rgb(184, 134, 11);
+
+$danger-color: rgb(213, 75, 75);
+$success-color: #2eb85c;
+$warning-color: #ffcb30;
+
+// Overlays rgba(0, 0, 0, 0.4)
+$primary-overlay: linear-gradient(to right, rgb(1, 74, 55, 0.85), transparent);
+$item-overlay: linear-gradient(0deg,var(--primary-color) 10%, rgba(2, 108, 81, 0) 40%);
+$item-overlay-hover: linear-gradient(0deg,var(--primary-color) 20%, rgba(2, 108, 81, 0) 70%);
+$opac-overlay:linear-gradient(0deg, rgb(0, 52, 39) 10%, rgba(2, 108, 81, 0.62) 100%);
+
+// Gray colors
+$gray-10: #2e2e31;
+$gray-8: #616161;
+$gray-7: #7b7a7d;
+$gray-6: #a5a5a6;
+$gray-5: #bcbcbc;
+$gray-3: #dcdcdc;
+$gray-2: #d1d0d2;
+$gray-1: #e8e7e8;
+$gray-0: #F9F9F9;
+
+$gray-primary: #f4f5f7;
+
+/*National Flag*/
+$national-green: #18b637;
+$national-yellow: #fcd20f;
+$national-blue: #00a4de;
+
+//social Media Buttons
+$facebook: #3b5998;
+$twitter: #00aced;
+$google-plus: #dd4b39;
+$google: #dd4b39;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$instagram: #517fa4;
+$pinterest: #cb2027;
+$flickr: #ff0084;
+$tumblr: #32506d;
+$dribble: #ea4c89;
+$vine: #00bf8f;
+$rss: #ff6f00;
+$blogger: #fb8f3d;
+
+// font-sizes
+$px14: 0.875rem;
+$px15: 0.9375rem;
+$px16: 1rem;
+$px17: 1.0625rem;
+$px18: 1.125rem;
+$px20: 1.25rem;
+$px22: 1.375rem;
+$px24: 1.5rem;
+
+// break points
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// values
+$header-height: 45px;
+$sidebar-width: 255px;
+$border-offset-value: 0px;
+
+//colors for gradient
+$gradient-color-1: $accent-color;
+$gradient-color-2: $secondary-color-faint;
+
+
+$primary: $primary-color !default;
+$primary-fade: $primary-color-bright;
+$primary-darker: $primary-color-dark;
+$secondary: $secondary-color !default;
+$success: #198754FF !default;
+$info: #39f !default;
+$warning: #FFC107FF !default;
+$danger: #e55353 !default;
+$light: #F2FDDB !default;
+$dark: #212529FF !default;
+$light-white: #ffff;
+
+$theme-colors: (
+  "primary-color": $primary,
+  "secondary-color": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+) !default;
+
+
+:root, [data-theme="light"] {
+
+  --header-height: 45px;
+  --sidebar-width: 255px;
+  --border-offset-value: 0px;
+
+  --primary-color: #{$primary};
+  --primary-color-fade: #{$primary-fade};
+  --primary-color-darker: #{$primary-darker};
+  --primary-color-bright: #{ $primary-color-bright};
+  --primary-color-dark: #{$primary-color-dark};
+  --primary-color-faded: #007F5F72;
+  --primary-color-very-faded: rgba(0, 127, 95, 0.11);
+  --primary-bg: #{$primary-bg};
+  --primary-bg-inverted: #{$primary-bg-inverted};
+
+  --header-bg: #{$header-bg};
+  --header-bg-inverted: #{$header-bg-inverted};
+
+  --main-bg: #{$main-bg};
+
+  --accordion-bg: #{$accordion-bg};
+
+  --secondary-color: #{$secondary};
+  --secondary-color-bright: #{$secondary-color-bright};
+  --secondary-color-faint: #{$secondary-color-faint};
+  --secondary-color-dark: #{$secondary-color-dark};
+
+  --light-white-color: #{$light-white};
+  --white-color: #fff;
+  --light-color: #f5f8fa;
+  --lighter-color: #e3ebeb;
+
+  --accent-color: #{$accent-color};
+  --accent-color-faded: #{$accent-color-faded};
+
+  --body-color: #{$body-color};
+  --link-color: #{$link-color};
+  --text-color: #{$text-color};
+  --primary-overlay: #{$primary-overlay};
+  --black-opacity: #{$black-opacity};
+  --opac-overlay: #{$opac-overlay};
+  --item-overlay: #{$item-overlay};
+  --item-overlay-hover: #{$item-overlay-hover};
+
+  --gray-0: #{$gray-0};
+  --gray-1: #{$gray-1};
+  --gray-2: #{$gray-2};
+  --gray-3: #{$gray-3};
+  --gray-5: #{$gray-5};
+  --gray-6: #{$gray-6};
+  --gray-7: #{$gray-7};
+  --gray-8: #{$gray-8};
+  --gray-10: #{$gray-10};
+
+  --gray-primary: #{$gray-primary};
+
+
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --main-font-family: 'Quicksand', sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --monospace-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+  @each $color, $value in $theme-colors {
+    --#{$color}: #{$value};
+  }
+}
