@@ -1,1 +1,36 @@
-<p>register works!</p>
+<app-auth-layout>
+  <ng-container>
+    <div class="login__wrapper">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-card>
+          <mat-card-content>
+            <mat-form-field>
+              <mat-label>Username:</mat-label>
+              <input matInput type="text" placeholder="Enter your username" formControlName="username">
+              <mat-icon class="mat__icon" matRipple matSuffix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Email:</mat-label>
+              <input matInput type="text" placeholder="Enter your email" formControlName="email">
+              <mat-icon class="mat__icon" matRipple matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Password:</mat-label>
+              <input matInput type="text" placeholder="Password" formControlName="password">
+              <!-- <mat-icon (click)="passwordHide = !passwordHide" [svgIcon]="passwordHide ? 'password' : 'lock-250'" class="hide-icon" matRipple matSuffix></mat-icon> -->
+              <mat-icon (click)="passwordHide = !passwordHide"  class="mat__icon" matRipple matSuffix>{{ passwordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </mat-form-field>
+          </mat-card-content>
+  
+          <mat-card-footer>
+            <mat-card-actions>
+              <button type="submit" mat-raised-button color="primary" class="register__btn px-4" [disabled]="registerForm.invalid">Register</button>
+            </mat-card-actions>
+            <p>Already registered? <a routerLink="/login" class="text-bold">Login Here</a></p>
+          </mat-card-footer>
+        </mat-card>
+      </form>
+    </div>
+  </ng-container>
+</app-auth-layout>
+

@@ -3,13 +3,13 @@
     padding: 2.75rem 3%;
     width: 500px;
   
-    mat-card-field {
+    mat-form-field {
       width: 98%;
       margin: 1%;
     }
 
     mat-card-footer {
-      margin: 2%;
+      padding: 0 2%;
       
       .login__btn {
         letter-spacing: 1.5px;
@@ -18,7 +18,7 @@
     }
   }
 
-  .hide-icon {
+  .mat__icon {
     cursor: pointer;
   }
 }
