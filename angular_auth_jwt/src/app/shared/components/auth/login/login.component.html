@@ -1,0 +1,29 @@
+<app-auth-layout>
+  <ng-container>
+    <div class="login__wrapper">
+      <form>
+        <mat-card>
+          <mat-card-content>
+            <mat-form-field>
+              <mat-label>Email:</mat-label>
+              <input matInput type="text" placeholder="Enter your email">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Password:</mat-label>
+              <input matInput [type]="passwordHide ? 'password' : 'text'" placeholder="Password">
+              <!-- <mat-icon (click)="passwordHide = !passwordHide" [svgIcon]="passwordHide ? 'password' : 'lock-250'" class="hide-icon" matRipple matSuffix></mat-icon> -->
+              <mat-icon (click)="passwordHide = !passwordHide"  class="hide-icon" matRipple matSuffix>{{ passwordHide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </mat-form-field>
+          </mat-card-content>
+  
+          <mat-card-footer>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" class="login__btn px-4">Login</button>
+            </mat-card-actions>
+            <p>Not registered? <a routerLink="/register" class="text-bold">Register Here</a></p>
+          </mat-card-footer>
+        </mat-card>
+      </form>
+    </div>
+  </ng-container>
+</app-auth-layout>

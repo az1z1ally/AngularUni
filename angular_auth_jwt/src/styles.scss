@@ -120,17 +120,17 @@ body[data-theme='dark'] {
 // @include mat.button-theme($light-theme);
 
 // Additional styles
-@import "./assets/styles/color";
-// @import "assets/styles/bootstrap";
-@import "./assets/styles/animation";
+@import "assets/styles/color";
+@import "assets/styles/bootstrap";
+@import "assets/styles/animation";
 @import "assets/styles/custom-mdc";
 @import "assets/styles/style";
 @import "assets/styles/graph";
 @import "assets/styles/media-queries/phone-media";
 @import "assets/styles/media-queries/general-media";
 
-@import "./assets/styles/boiler";
-@import "./assets/styles/accents";
+@import "assets/styles/boiler";
+@import "assets/styles/accents";
 
 @tailwind base;
 @tailwind components;

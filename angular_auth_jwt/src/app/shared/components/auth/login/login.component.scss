@@ -1,0 +1,24 @@
+.login__wrapper {
+  mat-card {
+    padding: 2.75rem 3%;
+    width: 500px;
+  
+    mat-card-field {
+      width: 98%;
+      margin: 1%;
+    }
+
+    mat-card-footer {
+      margin: 2%;
+      
+      .login__btn {
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .hide-icon {
+    cursor: pointer;
+  }
+}
