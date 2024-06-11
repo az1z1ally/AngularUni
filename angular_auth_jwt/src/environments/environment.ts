@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   config:{
-    apiUrl:'prod.api.com',
+    apiURL:'https://api.realworld.io',
     frontEndURL: 'https://githives.com',
   }
 };

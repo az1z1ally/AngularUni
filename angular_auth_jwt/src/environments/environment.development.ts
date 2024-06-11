@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   config:{
-    apiUrl:'dev.api.com',
+    apiURL:'https://api.realworld.io',
     frontEndURL: 'http://localhost:4200'
   }
 };

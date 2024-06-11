@@ -59,28 +59,63 @@ $custom-light-palette: (
   )
 );
 
+/* custom accent pallete*/
+$custom-accent: (
+    50 : #e1efee,
+    100 : #b5d6d4,
+    200 : #83bbb8,
+    300 : #51a09c,
+    400 : #2c8b86,
+    500 : #077771,
+    600 : #066f69,
+    700 : #05645e,
+    800 : #045a54,
+    900 : #024742,
+    A100 : #7bfff3,
+    A200 : #48ffee,
+    A400 : #15ffea,
+    A700 : #00fbe4,
+    contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+);
+
 // Typography configuration
-$custom-typography: mat.m2-define-typography-config(
+$custom-typography: mat.define-typography-config(
   $font-family: "Quicksand, Roboto",
-  $headline-1: mat.m2-define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $headline-2: mat.m2-define-typography-level(56px, 56px, 500, $letter-spacing: -0.02em),
-  $headline-3: mat.m2-define-typography-level(45px, 48px, 500, $letter-spacing: -0.005em),
-  $headline-4: mat.m2-define-typography-level(34px, 40px, 500),
-  $headline-5: mat.m2-define-typography-level(24px, 32px, 500),
-  $headline-6: mat.m2-define-typography-level(16px, 32px, 500),
-  $subtitle-1: mat.m2-define-typography-level(16px, 28px, 500),
-  $body-1: mat.m2-define-typography-level(14px, 20px, 500),
-  $body-2: mat.m2-define-typography-level(14px, 20px, 500),
-  $subtitle-2: mat.m2-define-typography-level(14px, 28px, 500),
-  $caption: mat.m2-define-typography-level(12px, 20px, 500),
-  $button: mat.m2-define-typography-level(14px, 14px, 500),
+  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $headline-2: mat.define-typography-level(56px, 56px, 500, $letter-spacing: -0.02em),
+  $headline-3: mat.define-typography-level(45px, 48px, 500, $letter-spacing: -0.005em),
+  $headline-4: mat.define-typography-level(34px, 40px, 500),
+  $headline-5: mat.define-typography-level(24px, 32px, 500),
+  $headline-6: mat.define-typography-level(16px, 32px, 500),
+  $subtitle-1: mat.define-typography-level(16px, 28px, 500),
+  $body-1: mat.define-typography-level(14px, 20px, 500),
+  $body-2: mat.define-typography-level(14px, 20px, 500),
+  $subtitle-2: mat.define-typography-level(14px, 28px, 500),
+  $caption: mat.define-typography-level(12px, 20px, 500),
+  $button: mat.define-typography-level(14px, 14px, 500),
 );
 
 
 // Light theme palettes
-$light-primary: mat.m2-define-palette($custom-light-palette, 500);
-$light-accent: mat.m2-define-palette(mat.$m2-pink-palette, A200, A100, A400);
-$light-warn: mat.m2-define-palette(mat.$m2-red-palette); // The warn palette is optional (defaults to red).
+$light-primary: mat.define-palette($custom-light-palette, 700);
+// $light-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$light-accent: mat.define-palette($custom-accent, 400, A100, A400);
+$light-warn: mat.define-palette(mat.$red-palette); // The warn palette is optional (defaults to red).
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -120,17 +155,17 @@ body[data-theme='dark'] {
 // @include mat.button-theme($light-theme);
 
 // Additional styles
-@import "./assets/styles/color";
-// @import "assets/styles/bootstrap";
-@import "./assets/styles/animation";
+@import "assets/styles/color";
+@import "assets/styles/bootstrap";
+@import "assets/styles/animation";
 @import "assets/styles/custom-mdc";
 @import "assets/styles/style";
 @import "assets/styles/graph";
 @import "assets/styles/media-queries/phone-media";
 @import "assets/styles/media-queries/general-media";
 
-@import "./assets/styles/boiler";
-@import "./assets/styles/accents";
+@import "assets/styles/boiler";
+@import "assets/styles/accents";
 
 @tailwind base;
 @tailwind components;

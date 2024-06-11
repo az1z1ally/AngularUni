@@ -1,6 +1,7 @@
 export const APIConstant = {
-  USERS: {
-    GET_ALL_USERS: 'users',
-    CREATE_NEW_USER: 'user/createNewUser'
+  users: {
+    GET_CURRENT_USER: 'api/user',
+    REGISTER: 'api/users',
+    LOGIN: 'api/users/login'
   }
 }

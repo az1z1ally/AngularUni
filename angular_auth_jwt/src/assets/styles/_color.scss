@@ -40,15 +40,15 @@ $item-overlay-hover: linear-gradient(0deg,var(--primary-color) 20%, rgba(2, 108,
 $opac-overlay:linear-gradient(0deg, rgb(0, 52, 39) 10%, rgba(2, 108, 81, 0.62) 100%);
 
 // Gray colors
-$gray-10: #2e2e31;
+$gray-9: #2e2e31;
 $gray-8: #616161;
 $gray-7: #7b7a7d;
 $gray-6: #a5a5a6;
 $gray-5: #bcbcbc;
-$gray-3: #dcdcdc;
-$gray-2: #d1d0d2;
-$gray-1: #e8e7e8;
-$gray-0: #F9F9F9;
+$gray-4: #dcdcdc;
+$gray-3: #d1d0d2;
+$gray-2: #e8e7e8;
+$gray-1: #F9F9F9;
 
 $gray-primary: #f4f5f7;
 
@@ -169,15 +169,15 @@ $theme-colors: (
   --item-overlay: #{$item-overlay};
   --item-overlay-hover: #{$item-overlay-hover};
 
-  --gray-0: #{$gray-0};
   --gray-1: #{$gray-1};
   --gray-2: #{$gray-2};
   --gray-3: #{$gray-3};
+  --gray-4: #{$gray-4};
   --gray-5: #{$gray-5};
   --gray-6: #{$gray-6};
   --gray-7: #{$gray-7};
   --gray-8: #{$gray-8};
-  --gray-10: #{$gray-10};
+  --gray-9: #{$gray-9};
 
   --gray-primary: #{$gray-primary};
 

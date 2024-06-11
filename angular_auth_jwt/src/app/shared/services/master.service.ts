@@ -9,7 +9,11 @@ export class MasterService {
 
   constructor(private http: HttpClient) { }
 
-  get<T>(url: string): Observable<T> {
-    return this.http.get<T>(url)
+  get<T>(url: string, options?: object): Observable<T> {
+    return this.http.get<T>(url, options)
+  }
+
+  post<T>(url: string, body: object, options?: object): Observable<T> {
+    return this.http.post<T>(url, body, options)
   }
 }

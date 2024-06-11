@@ -1,0 +1,37 @@
+// BREAKPOINTS
+
+  // 700px, 900px, 991px, 1440px
+  $breakpoints-up: (
+    "medium": 43.75rem,
+    "large": 56.25rem,
+    "larger" : 61.9375rem,
+    "xlarge": 90rem
+  );
+
+  // 699.98px, 899.98px, 1439.98px
+  $breakpoints-down: (
+    "small": 43.7485rem,
+    "medium": 56.24875rem,
+    "large": 89.99875rem
+  );
+
+  @mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+      @content;
+    }
+  }
+
+  @mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+      @content;
+    }
+  }
+
+  // Set text color
+  @function set-text-color($color) {
+    @if(lightness($color) > 40){
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }

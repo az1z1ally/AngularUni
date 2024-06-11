@@ -8,16 +8,18 @@ import { provideToastr } from 'ngx-toastr';
 import { ToastrConfig } from './toastr.config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
-import { tokenInterceptor } from './shared/interceptors/token.interceptor';
+import { authInterceptor } from './shared/interceptors/auth.interceptor';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes), provideClientHydration(),
+    provideRouter(routes),
+    provideClientHydration(),
     provideHttpClient(
       withFetch(),
       withInterceptors([
-        tokenInterceptor
+        authInterceptor
       ])
     ),
     provideAnimations(), // required animations providers
