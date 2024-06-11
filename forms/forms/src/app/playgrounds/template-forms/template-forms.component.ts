@@ -16,7 +16,7 @@ export class TemplateFormsComponent implements OnInit{
 
   constructor() {
     this.userInfo = {
-      firstName: 'Working',
+      firstName: 'JS',
       lastName: '',
       nickName: '',
       email: '',

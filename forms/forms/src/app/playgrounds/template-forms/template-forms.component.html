@@ -1,54 +1,62 @@
-<h2 class="header">Template-Driven Forms Playground</h2>
+<div class="wrapper">
+  <h2 class="header">Template-Driven Forms Playground</h2>
 
-<form class="form">
-  <p>Form model state:</p>
-  <pre>
-    {{ userInfo | json }}
-  </pre>
-  <div class="form-field">
-    <label for="first-name">First Name</label>
-    <input [(ngModel)]="userInfo.firstName" type="text" name="first-name" id="first-name" placeholder="Enter your first name">
-  </div>
-  <div class="form-field">
-    <label for="last-name">Last Name</label>
-    <input [(ngModel)]="userInfo.lastName" type="text" name="last-name" id="last-name" placeholder="Enter your last name">
-  </div>
-  <div class="form-field">
-    <label for="nick-name">Nick Name</label>
-    <input [(ngModel)]="userInfo.nickName" type="text" name="nick-name" id="nick-name" placeholder="Come up with a nick name">
-  </div>
-  <div class="form-field">
-    <label for="email">Email</label>
-    <input [(ngModel)]="userInfo.email" type="email" name="email" id="email" placeholder="Provide your email">
-  </div>
-  <div class="form-field-inline-group">
-    <div class="form-field yob">
-      <label for="year-of-birth">Year of birth</label>
-      <select [(ngModel)]="userInfo.yearOfBirth" name="year-of-birth" id="year-of-birth">
-        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
-      </select>
-    </div>
-    <div class="form-field passport">
-      <label for="passport">Passport No</label>
-      <input [(ngModel)]="userInfo.passport" type="text" name="passport" id="passport" placeholder="Provide your passport no.">
-    </div>
-  </div>
-  <fieldset>
-    <legend>Address</legend>
+  <form class="form" [ngFormOptions]="{updateOn: 'blur'}">
+    <p>Form model state:</p>
+    <pre>
+      {{ userInfo | json }}
+    </pre>
     <div class="form-field">
-      <label for="address">Full Address</label>
-      <input [(ngModel)]="userInfo.fullAddress" type="text" name="address" id="address" placeholder="Street name & House number">
+      <label for="first-name">First Name</label>
+      <input
+        [(ngModel)]="userInfo.firstName" 
+        [ngModelOptions]="{name: 'first-name', updateOn: 'submit', standalone: true}"
+        type="text"
+        id="first-name" 
+        placeholder="Enter your first name"
+      >
     </div>
     <div class="form-field">
-      <label for="city">City</label>
-      <input [(ngModel)]="userInfo.city" type="text" name="city" id="city" placeholder="City">
+      <label for="last-name">Last Name</label>
+      <input [(ngModel)]="userInfo.lastName" type="text" name="last-name" id="last-name" placeholder="Enter your last name">
     </div>
     <div class="form-field">
-      <label for="post-code">Post Code</label>
-      <input [(ngModel)]="userInfo.postCode" type="text" name="post-code" id="post-code" placeholder="Post code">
+      <label for="nick-name">Nick Name</label>
+      <input [(ngModel)]="userInfo.nickName" type="text" name="nick-name" id="nick-name" placeholder="Come up with a nick name">
     </div>
-  </fieldset>
-  <div class="btns">
-    <button>Save</button>
-  </div>
-</form>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input [(ngModel)]="userInfo.email" type="email" name="email" id="email" placeholder="Provide your email">
+    </div>
+    <div class="form-field-inline-group">
+      <div class="form-field yob">
+        <label for="year-of-birth">Year of birth</label>
+        <select [(ngModel)]="userInfo.yearOfBirth" name="year-of-birth" id="year-of-birth">
+          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+        </select>
+      </div>
+      <div class="form-field passport">
+        <label for="passport">Passport No</label>
+        <input [(ngModel)]="userInfo.passport" type="text" name="passport" id="passport" placeholder="Provide your passport no.">
+      </div>
+    </div>
+    <fieldset>
+      <legend>Address</legend>
+      <div class="form-field">
+        <label for="address">Full Address</label>
+        <input [(ngModel)]="userInfo.fullAddress" type="text" name="address" id="address" placeholder="Street name & House number">
+      </div>
+      <div class="form-field">
+        <label for="city">City</label>
+        <input [(ngModel)]="userInfo.city" type="text" name="city" id="city" placeholder="City">
+      </div>
+      <div class="form-field">
+        <label for="post-code">Post Code</label>
+        <input [(ngModel)]="userInfo.postCode" type="text" name="post-code" id="post-code" placeholder="Post code">
+      </div>
+    </fieldset>
+    <div class="btns">
+      <button>Save</button>
+    </div>
+  </form>
+</div>

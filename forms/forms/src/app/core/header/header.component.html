@@ -1,0 +1,9 @@
+<header class="header">
+  <img class="logo" src="/angular-logo.png" alt="Angular logo">
+  <div class="nav">
+    <a class="navlink" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}">Template-Driven Forms</a>
+    <a class="navlink" routerLinkActive="active" routerLink="reactive-form" >Reactive Forms</a>
+    <a class="navlink" routerLinkActive="active" routerLink="reusable-form" >Reusable Forms</a>
+    <input [(ngModel)]="searchString" type="search" name="search" placeholder="Global Search" class="search">
+  </div>
+</header>
