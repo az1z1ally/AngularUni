@@ -20,7 +20,7 @@ export class TemplateFormsComponent implements OnInit{
       lastName: '',
       nickName: '',
       email: '',
-      yearOfBirth: 0,
+      yearOfBirth: this.years[0],
       passport: '',
       fullAddress: '',
       city: '',

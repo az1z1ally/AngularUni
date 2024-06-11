@@ -4,7 +4,6 @@
 }
 
 .form {
-  font-size: .75rem;
   letter-spacing: .25px;
   padding: .5rem 1rem;
   background: #dee3ea;
@@ -12,6 +11,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   max-width: 360px;
+  font-weight: 500;
 
   .form-field {
     display: flex;
@@ -37,11 +37,11 @@
     gap: .5rem;
 
     .yob {
-      flex: 2;
+      flex: 1;
     }
 
     .passport {
-      flex: 1;
+      flex: 2;
     }
   }
 
