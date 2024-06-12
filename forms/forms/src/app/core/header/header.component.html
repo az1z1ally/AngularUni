@@ -4,6 +4,12 @@
     <a class="navlink" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}">Template-Driven Forms</a>
     <a class="navlink" routerLinkActive="active" routerLink="reactive-form" >Reactive Forms</a>
     <a class="navlink" routerLinkActive="active" routerLink="reusable-form" >Reusable Forms</a>
+    <!-- 
+      In standalone mode the ngModel does'nt register itself to the parent form, it won't be part of the form control group.
+      ngModel outside the form is automatically set to standalone, we don't need to provide it explicitly.
+      Standalone control can be useful if you want a control just for the proper working of the form but you are not interested in its value,
+      or when you just need a single control like global search we just created below.  
+    -->
     <input [(ngModel)]="searchString" type="search" name="search" placeholder="Global Search" class="search">
   </div>
 </header>

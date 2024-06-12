@@ -1,7 +1,7 @@
 <div class="wrapper">
   <h2 class="header">Template-Driven Forms Playground</h2>
 
-  <form class="form" [ngFormOptions]="{updateOn: 'blur'}">
+  <form class="form" #form="ngForm" (ngSubmit)="onSubmitForm(form, $event)" [ngFormOptions]="{updateOn: 'blur'}">
     <p>Form model state:</p>
     <pre>
       {{ userInfo | json }}
