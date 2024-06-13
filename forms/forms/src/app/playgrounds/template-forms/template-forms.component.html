@@ -1,5 +1,6 @@
-<div class="wrapper">
-  <h2 class="header">Template-Driven Forms Playground</h2>
+<app-layout>
+  <ng-container>
+    <h2 class="header">Template-Driven Forms Playground</h2>
 
   <form class="form" #form="ngForm" (ngSubmit)="onSubmitForm(form, $event)" [ngFormOptions]="{updateOn: 'blur'}">
     <p>Form model state:</p>
@@ -59,4 +60,5 @@
       <button>Save</button>
     </div>
   </form>
-</div>
+  </ng-container>
+</app-layout>

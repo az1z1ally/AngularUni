@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UserInfo } from '../../core/user-info';
+import { LayoutComponent } from '../../shared/components/layout/layout.component';
 
 @Component({
   selector: 'app-template-forms',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [LayoutComponent, CommonModule, FormsModule],
   templateUrl: './template-forms.component.html',
   styleUrl: './template-forms.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
