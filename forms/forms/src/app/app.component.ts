@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TemplateFormsComponent } from './playgrounds/template-forms/template-forms.component';
 import { HeaderComponent } from './core/header/header.component';
 
 @Component({

@@ -100,6 +100,21 @@ $theme-colors: (
   padding: 0;
 }
 
+:focus,
+:focus-visible {
+  outline: 2px solid var(--border-color) !important;
+  transition: none !important;
+}
+
+button:focus, 
+button:focus-visible, 
+a:focus, 
+a:focus-visible {
+  outline: 3px dotted var(--primary-color) !important;
+  outline-offset: -.375rem;
+}
+
+
 body {
   min-height: 100vh;
   font-family: Quicksand, Montserrat, sans-serif;

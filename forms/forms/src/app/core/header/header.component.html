@@ -1,14 +1,18 @@
 <header class="header">
-  <img class="logo" src="/angular-logo.png" alt="Angular logo">
+  <img class="logo" src="/angular-logo-sm.png" alt="Angular logo">
   <nav class="nav">
-    <a class="navlink" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}">Template-Driven Forms</a>
-    <a class="navlink" routerLinkActive="active" routerLink="reactive-form" >Reactive Forms</a>
-    <a class="navlink" routerLinkActive="active" routerLink="reusable-form" >Reusable Forms</a>
-    <div class="dropdown" data-dropdown routerLinkActive="active" routerLink="others">
-      <a class="dropdown_link" data-dropdown-toggle>others</a>
-      <div class="dropdown__menu">
-        <div class="dropdown__item"></div>
-      </div>
+    <a class="navlink" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}">template-driven forms</a>
+    <a class="navlink" routerLinkActive="active" routerLink="reactive-form" >reactive forms</a>
+    <a class="navlink" routerLinkActive="active" routerLink="reusable-form" >reusable forms</a>
+    <div class="dropdown" data-dropdown clickOutside (clickOutside)="clickedOutside()">
+      <a class="dropdown__link" data-dropdown-toggle (click)="toggleMenu()">others</a>
+      @if (isMenuOpened) {
+        <div class="dropdown__menu">
+          <a class="dropdown__item" routerLinkActive="active" routerLink="2-way">2 way data binding</a>
+          <a class="dropdown__item" routerLinkActive="active" routerLink="content-projection">content projection</a>
+          <a class="dropdown__item" routerLinkActive="active" routerLink="2-way">ng template-outlet</a>
+        </div>
+      }
     </div>
     <!-- 
       In standalone mode the ngModel does'nt register itself to the parent form, it won't be part of the form control group.
