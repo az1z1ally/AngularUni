@@ -27,6 +27,10 @@ export class ClickOutsideDirective extends Unsub implements AfterViewInit {
     ).subscribe(() => {
       this.clickOutside.emit()
     })
+
+    fromEvent(this.document, 'scroll').pipe(
+      takeUntil(this.unSub$)
+    ).subscribe(() => (this.clickOutside.emit()))
   }
 
   isInside(elementToCheck: HTMLElement): boolean {
