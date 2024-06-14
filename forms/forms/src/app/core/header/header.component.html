@@ -1,15 +1,23 @@
 <header class="header">
   <img class="logo" src="/angular-logo-sm.png" alt="Angular logo">
   <nav class="nav">
-    <a class="navlink" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}">template-driven forms</a>
-    <a class="navlink" routerLinkActive="active" routerLink="reactive-form" >reactive forms</a>
-    <a class="navlink" routerLinkActive="active" routerLink="reusable-form" >reusable forms</a>
-    <div class="dropdown" data-dropdown clickOutside (clickOutside)="clickedOutside()">
-      <a class="dropdown__link" data-dropdown-toggle (click)="toggleMenu()">others</a>
-      @if (isMenuOpened) {
+    <div class="dropdown" data-dropdown clickOutside (clickOutside)="clickedOutside(0)">
+      <a class="dropdown__link" data-dropdown-toggle (click)="toggleMenu(0)">Forms</a>
+      @if (dropdownStates[0]) {
+        <div class="dropdown__menu">
+          <a class="dropdown__item" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact: true}">template-driven forms</a>
+          <a class="dropdown__item" routerLinkActive="active" routerLink="reactive-form" >reactive forms</a>
+          <a class="dropdown__item" routerLinkActive="active" routerLink="reusable-form" >reusable forms</a>
+        </div>
+      }
+    </div>
+    <a class="navlink" routerLinkActive="active" routerLink="content-projection">content projection</a>
+    
+    <div class="dropdown" data-dropdown clickOutside (clickOutside)="clickedOutside(1)">
+      <a class="dropdown__link" data-dropdown-toggle (click)="toggleMenu(1)">others</a>
+      @if (dropdownStates[1]) {
         <div class="dropdown__menu">
           <a class="dropdown__item" routerLinkActive="active" routerLink="two-way-db">2 way data binding</a>
-          <a class="dropdown__item" routerLinkActive="active" routerLink="content-projection">content projection</a>
           <a class="dropdown__item" routerLinkActive="active" routerLink="2-way">ng template-outlet</a>
         </div>
       }

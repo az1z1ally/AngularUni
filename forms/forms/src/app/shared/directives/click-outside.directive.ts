@@ -41,3 +41,24 @@ export class ClickOutsideDirective extends Unsub implements AfterViewInit {
   }
 
 }
+
+
+
+// Other way
+// import { Directive, ElementRef, HostListener, Output, EventEmitter } from '@angular/core';
+
+// @Directive({
+//   selector: '[clickOutside]'
+// })
+// export class ClickOutsideDirective {
+//   @Output('clickOutside') outside = new EventEmitter<void>();
+
+//   constructor(private element: ElementRef) {}
+
+//   @HostListener('document:click', ['$event'])
+//   onDocumentClick(event: MouseEvent): void {
+//     if (!this.element.nativeElement.contains(event.target)) {
+//       this.outside.emit();
+//     }
+//   }
+// }

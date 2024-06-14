@@ -12,14 +12,28 @@ import { ClickOutsideDirective } from '../../shared/directives/click-outside.dir
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  searchString: string = ''
-  isMenuOpened: boolean = false
+  searchString: string = '';
+  dropdownStates: boolean[] = []; // An array to track menu states for each dropdown
 
-  toggleMenu() : void {
-    this.isMenuOpened = !this.isMenuOpened
+  toggleMenu(index: number): void {
+    this.dropdownStates[index] = !this.dropdownStates[index];
   }
 
-  clickedOutside(): void {
-    this.isMenuOpened = false
+  clickedOutside(index: number): void {
+    this.dropdownStates[index] = false;
   }
 }
+
+
+// export class HeaderComponent {
+//   searchString: string = ''
+//   isMenuOpened: boolean = false
+
+//   toggleMenu() : void {
+//     this.isMenuOpened = !this.isMenuOpened
+//   }
+
+//   clickedOutside(): void {
+//     this.isMenuOpened = false
+//   }
+// }
