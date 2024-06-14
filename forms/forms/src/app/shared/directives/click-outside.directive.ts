@@ -9,7 +9,7 @@ import { Unsub } from '../classes/unsub.class';
 })
 export class ClickOutsideDirective extends Unsub implements AfterViewInit {
 
-  @Output() clickOutside = new EventEmitter<void>()
+  @Output('clickOutside') outside = new EventEmitter<void>()
 
   constructor(
     private element: ElementRef, 
@@ -20,17 +20,17 @@ export class ClickOutsideDirective extends Unsub implements AfterViewInit {
 
   ngAfterViewInit(): void {
     fromEvent(this.document, 'click').pipe(
-      filter(event => {
+      filter((event) => {
         return !this.isInside(event.target as HTMLElement)
       }),
       takeUntil(this.unSub$)
     ).subscribe(() => {
-      this.clickOutside.emit()
+      this.outside.emit()
     })
 
     fromEvent(this.document, 'scroll').pipe(
       takeUntil(this.unSub$)
-    ).subscribe(() => (this.clickOutside.emit()))
+    ).subscribe(() => (this.outside.emit()))
   }
 
   isInside(elementToCheck: HTMLElement): boolean {

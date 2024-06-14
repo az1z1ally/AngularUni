@@ -47,7 +47,7 @@
       &::after {
         content: '';
         position: absolute;
-        display: block;
+        display: inline-block;
         top: 100%;
         right: 8px;
         width: 0;
@@ -58,9 +58,9 @@
       }
 
       &:hover::after {
-          transform-origin: left;
-          left: 8px;
-          width: 90%;
+        transform-origin: left;
+        left: 8px;
+        width: 90%;
       }
     }
 
