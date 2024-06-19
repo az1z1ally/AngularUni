@@ -25,6 +25,8 @@ export class HeaderComponent {
 }
 
 
+
+// Old Implementation
 // export class HeaderComponent {
 //   searchString: string = ''
 //   isMenuOpened: boolean = false

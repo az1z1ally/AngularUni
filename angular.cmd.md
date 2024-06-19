@@ -40,7 +40,7 @@ ng g m modules/asset-disposal --routing=true --flat false && ng g c modules/asse
 
 ### DEPENDING on your store configuration
 Entity
-ng g entity store/entities/settings/aircraft/aircraft --reducers ../../reducers/index.ts --flat false --skip-tests true
+ng g entity store/entities/settings/aircraft --reducers ../index.ts --flat false --skip-tests true 
 
 Effect
 ng g effect store/entities/settings/aircraft --root -m ../../effects/index.ts --flat false --skip-tests true

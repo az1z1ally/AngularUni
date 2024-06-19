@@ -3,7 +3,7 @@ import { Subject } from "rxjs";
 
 @Injectable()
 export abstract class Unsub implements OnDestroy {
-  unSub$ = new Subject<void>()
+  protected unSub$ = new Subject<void>()
 
   ngOnDestroy(): void {
     this.unSub$.next()
